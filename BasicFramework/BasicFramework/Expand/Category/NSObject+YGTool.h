@@ -1,4 +1,4 @@
-//
+//获取view的所在父ViewController
 //
 
 #import <Foundation/Foundation.h>

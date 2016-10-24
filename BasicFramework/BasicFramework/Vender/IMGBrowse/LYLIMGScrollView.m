@@ -22,6 +22,7 @@
     // Drawing code
 }
 */
+
 -(instancetype)initWithImgs:(NSArray *)imgs withIndexPage:(NSInteger)page_number
 {
     self = [super init];

@@ -62,7 +62,7 @@
 #endif
 
 //NSCoding协议遵循
-#define kObjectCodingAction  -(id)initWithCoder:(NSCoder *)aDecoder\
+#define kObjectCodingAction -(id)initWithCoder:(NSCoder *)aDecoder\
 {\
 self = [super init];\
 if (self) {\

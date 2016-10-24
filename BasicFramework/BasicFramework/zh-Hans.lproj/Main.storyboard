@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D8O-LC-gA2">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Language-->
+        <scene sceneID="rQP-Xz-17e">
+            <objects>
+                <viewController id="D8O-LC-gA2" customClass="bViewControllerLanguage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0s1-s2-oXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="QhR-g4-cbm"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="x20-Mj-9aW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfX-L2-rFX">
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="jl9-zc-PHz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="world_1" translatesAutoresizingMaskIntoConstraints="NO" id="9BC-R9-M3h"/>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9BC-R9-M3h" firstAttribute="centerX" secondItem="x20-Mj-9aW" secondAttribute="centerX" id="Euh-nI-csH"/>
+                            <constraint firstItem="cfX-L2-rFX" firstAttribute="top" secondItem="9BC-R9-M3h" secondAttribute="bottom" constant="30" id="cKo-5d-iqU"/>
+                            <constraint firstItem="cfX-L2-rFX" firstAttribute="centerX" secondItem="x20-Mj-9aW" secondAttribute="centerX" id="cgU-Wy-eVD"/>
+                            <constraint firstItem="9BC-R9-M3h" firstAttribute="top" secondItem="x20-Mj-9aW" secondAttribute="top" constant="150" id="cxq-8M-BOG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="cfX-L2-rFX" id="4TQ-HS-wg8"/>
+                        <outlet property="worldImageView" destination="9BC-R9-M3h" id="IdD-OT-Iph"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f6c-I6-5HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-655" y="-201"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="world_1" width="150" height="150"/>
+    </resources>
+</document>

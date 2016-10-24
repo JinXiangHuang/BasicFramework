@@ -7,7 +7,42 @@
 		<key>BasicFramework.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>13</integer>
+		</dict>
+		<key>BasicFrameworkWithSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>12</integer>
+		</dict>
+		<key>BasicFramework_set.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<true/>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
+		<key>BasicFramework_storyboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Copy of BasicFramework_storyboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>9</integer>
+		</dict>
+		<key>Copy of Copy of BasicFramework_storyboard.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+			<key>orderHint</key>
+			<integer>10</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +58,21 @@
 			<true/>
 		</dict>
 		<key>364DA55E1D65849300F6F424</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EF376431D950ADA00C2C4E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EF376611D950BCB00C2C4E2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5EF376751D950C7F00C2C4E2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -4,14 +4,14 @@
 //
 //  Created by Rainy on 16/8/18.
 //  Copyright © 2016年 Rainy. All rights reserved.
-//
+//  prefix文件和这个工程关联,-> in target Build Settings 中搜索Prefix ,在Apple LLVM  -Languge 中的Prefix Herder 添加新建   的Prefix的路径(直接将这个文件拖进去就行); -> /Users/mr-tech/Desktop/未命名文件夹/框架/BasicFramework-master/BasicFramework/BasicFramework/PrefixHeader.pch <->  $(SRCROOT)/BasicFramework/PrefixHeader.pch
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
-#import <SDWebImage/UIImageView+WebCache.h>
+//#import <SDWebImage/UIImageView+WebCache.h>
 #import <SDWebImage/UIButton+WebCache.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <Reachability/Reachability.h>
@@ -20,13 +20,17 @@
 #import "Theme.h"
 #import "CommonDefine.h"
 #import "HTTPURLDefine.h"
-#import "Constants.h"
+
+
+
 #import "UIImage+SPIExtension.h"
-
-
 #import "UIView+Extension.h"
 #import "NSString+LBKJExtenison.h"
 #import "UIDevice-Hardware.h"
+#import "UIImageView+YGUIImageView.h"
+
+
+#import "Constants.h"
 
 #import "DFYGProgressHUD.h"
 #import "AppSingle.h"

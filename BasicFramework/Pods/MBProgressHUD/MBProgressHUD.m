@@ -76,7 +76,7 @@ static const CGFloat kDetailsLabelFontSize = 12.f;
 @implementation MBProgressHUD
 
 #pragma mark - Properties
-
+//重写setter和getter需要@synthesize，只重写一个也是不用写的
 @synthesize animationType;
 @synthesize delegate;
 @synthesize opacity;

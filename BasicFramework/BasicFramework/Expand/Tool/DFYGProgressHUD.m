@@ -78,7 +78,7 @@
 
 - (void)hideProgressHUDAfterDelay:(NSTimeInterval)delay {
     [self.progressHUD hide:YES afterDelay:delay];
-    self.progressHUD = nil;
+     self.progressHUD = nil;
 }
 
 - (void)setProgress:(CGFloat)progress {

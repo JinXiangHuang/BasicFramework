@@ -24,3 +24,18 @@ target ‘BasicFramework’ do
 #<<end>>
 
 end
+#安装Cocoapods
+#升级Ruby环境 终端输入：sudo gem update --system
+#安装CocoaPods时我们要访问cocoapods.org  gem sources --remove https://rubygems.org/    gem sources -a https://ruby.taobao.org/
+#可以使用下面的命令(红色部分)查看是否更换镜像成功（如下图所示）：gem sources -l
+#安装Cocoapods，在终端输入命令 sudo gem install cocoapods
+#使用search命令搜索类库名：pod search AFNetworking
+#需要在工程中创建一个Podfile文件 vim Podfile||pod init 运行结束后，该目录下，会生成了一个Podfile文件
+# 目标平台及其版本use_frameworks! # swift项目需要这句话，是Objective-C项目的话，请在前面加个`#`注释掉target 'xxxx' do
+# 在这里添加你的依赖库说明，如pod xxx
+
+#按章第三方库pod install
+#如果在安装之后，修改了Podfile文件，可以执行以下的其中一个命令进行库的更新(两个命令的区别和上面说的一样):
+#pod update --no-repo-updateorpod update
+
+#更改了Podfile文件，pod update命令

@@ -12,12 +12,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    if (self.backBarTextIsBack) {
-        
+  
+//    if (self.backBarTextIsBack) {
+    
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
-    }
+//    }else{
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"destroy_nvc2" style:UIBarButtonItemStylePlain target:self action:@selector(disMissNvc2)];
+//    }
+    
+    self.title = @"nvc2";
+    
+    
+    
 }
-
+-(void)disMissNvc2{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 #pragma mark - removeKeyboardNotification
 - (void)removeKeyboardNotification
 {
@@ -72,12 +83,6 @@
 -(void)dealloc
 {
     [kNotificationCenter removeObserver:self];
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 /*
