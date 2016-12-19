@@ -4,9 +4,7 @@
 //
 //  Created by Rainy on 16/8/18.
 //  Copyright © 2016年 Rainy. All rights reserved.
-//  __block?? __weak
-//   afnetworking??
-//   NSProgress
+
 
 #import "AppDelegate.h"
 #import "RootViewController.h"
@@ -31,19 +29,48 @@
     
 #pragma mark 网络监控打开 当前网络状态，取 kNetworkType 值。
     [[AppSingle Shared]setReachability];
+    
+    
+    //1
     /**
      1.在工程配置中移除关联 删除 Main Interface中的Main
      2.移除Main.storyboard中的关联关系,删除Main.storyboard文件
      3.[self setMyWindowAndRootViewController];
      */
-    [self setMyWindowAndRootViewController];//保留Main.storyboard文件
     
+    
+    //2
+    //    [self setMyWindowAndRootViewController];//保留Main.storyboard文件
+    
+    //3
     /*
      UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main2" bundle:nil];
      UIViewController * vc2 = [storyBoard instantiateInitialViewController];
      //    UIViewController * vc2 = [storyBoard instantiateViewControllerWithIdentifier:@"HomeNvc"];
      AppDelegate * application = [UIApplication sharedApplication].delegate;
      application.window.rootViewController = vc2;*/
+    
+     //4 Main.storyboard(root)
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+
+    
+    //  __block?? __weak
+    //   afnetworking??
+    //   NSProgress
+    //强制转换
+    //uicollectionView controller
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
     
     
     return YES;

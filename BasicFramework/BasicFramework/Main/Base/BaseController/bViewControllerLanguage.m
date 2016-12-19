@@ -7,9 +7,8 @@
 //
 
 #import "bViewControllerLanguage.h"
-
-#define ChangeLanguageNotificationName @"changeLanguage"
-
+#import "bLanguageManager.h"
+#import "bPreferenceViewController.h"
 @interface bViewControllerLanguage ()
 @property (weak, nonatomic) IBOutlet UIImageView *worldImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
@@ -27,9 +26,7 @@
     
     [self setWorldImageViewAnimation];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:ChangeLanguageNotificationName object:nil];
-    
-//    [self changeLanguage];
+    [self changeLanguage];
 }
 
 //设置动画
@@ -47,22 +44,18 @@
 
 //改变语言界面刷新
 - (void)changeLanguage {
-//    self.title = kLocalizedString(@"home",@"首页");
-//    
-//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:kLocalizedString(@"preference",@"偏好") style:UIBarButtonItemStyleDone target:self action:@selector(gotoPreferenceViewController)];
+   
+    self.title = kLocalizedString(@"home",@"首页");
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:kLocalizedString(@"preference",@"偏好") style:UIBarButtonItemStyleDone target:self action:@selector(gotoPreferenceViewController)];
+    self.navigationItem.rightBarButtonItem = item;
+    _titleLabel.text = kLocalizedString(@"welcome",@"你好 世界!");
+    
+    
+//    self.title = NSLocalizedString(@"home", @"备注");
+//    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"preference",@"偏好")  style:UIBarButtonItemStyleDone target:self action:@selector(gotoPreferenceViewController)];
 //    self.navigationItem.rightBarButtonItem = item;
 //    
-//    _titleLabel.text = kLocalizedString(@"welcome",@"你好 世界!");
-    
-    
-    
-    
-    self.title = NSLocalizedString(@"home", @"备注");
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"preference",@"偏好")  style:UIBarButtonItemStyleDone target:self action:@selector(gotoPreferenceViewController)];
-    self.navigationItem.rightBarButtonItem = item;
-    
-    _titleLabel.text = NSLocalizedString(@"welcome",@"你好 世界!");
+//    _titleLabel.text = NSLocalizedString(@"welcome",@"你好 世界!");
   
     NSLog(@"%@",NSLocaleLanguageCode);
     
@@ -76,9 +69,9 @@
 
 //去偏好设置界面
 - (void)gotoPreferenceViewController {
-//    HXPreferenceViewController *vc = [HXPreferenceViewController new];
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-//    [self.navigationController presentViewController:nav animated:YES completion:nil];
+    bPreferenceViewController *vc = [bPreferenceViewController new];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.navigationController presentViewController:nav animated:YES completion:nil];
 }
 
 
@@ -88,7 +81,7 @@
 }
 
 - (void)dealloc {
-//    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:ChangeLanguageNotificationName];
+    [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:ChangeLanguageNotificationName];
 }
 
 /*

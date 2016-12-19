@@ -30,7 +30,7 @@
                 <constraint firstItem="tJg-hM-oM2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PLJ-q3-Jxu"/>
                 <constraint firstItem="tJg-hM-oM2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="xhe-Oh-4jL"/>
             </constraints>
-            <point key="canvasLocation" x="-351" y="137"/>
+            <point key="canvasLocation" x="-373" y="36"/>
         </view>
     </objects>
 </document>

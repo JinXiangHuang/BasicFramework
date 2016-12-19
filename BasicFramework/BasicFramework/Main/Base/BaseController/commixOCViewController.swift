@@ -14,7 +14,7 @@ import UIKit
     override func viewDidLoad() {
         super.viewDidLoad()
        //调用OC
-        RootViewController.init().nsKeyedArchiverarchiveRootObject()
+        RootViewController.init().oclog();
        //
 //        logMe()
 //        self.logMe()
@@ -542,3 +542,8 @@ import UIKit
     */
 
 }
+
+
+
+
+

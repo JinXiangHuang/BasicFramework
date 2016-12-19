@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  BasicFramework
+
+  Created by mr-tech on 16/10/19.
+  Copyright © 2016年 Rainy. All rights reserved.
+*/
+"home" = "ショウ' y";
+"welcome" = "こんにちは世界!";
+"preference" = "好み";
+"cancel" = "キャンセル";
+"search" = "検索";

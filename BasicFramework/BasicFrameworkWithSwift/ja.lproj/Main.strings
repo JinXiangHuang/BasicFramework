@@ -1,0 +1,33 @@
+
+/* Class = "UILabel"; text = "Game"; ObjectID = "CAn-bM-4Su"; */
+"CAn-bM-4Su.text" = "Game";
+
+/* Class = "UITabBarItem"; badgeValue = "2"; ObjectID = "Ck6-Uy-2p6"; */
+"Ck6-Uy-2p6.badgeValue" = "2";
+
+/* Class = "UITabBarItem"; title = "Item 2"; ObjectID = "GTA-zE-qi7"; */
+"GTA-zE-qi7.title" = "Item 2";
+
+/* Class = "UILabel"; text = "Subtitle"; ObjectID = "Gng-uz-u04"; */
+"Gng-uz-u04.text" = "Subtitle";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "IVh-sd-Yk7"; */
+"IVh-sd-Yk7.text" = "Title";
+
+/* Class = "UILabel"; text = "second tab"; ObjectID = "L6P-UJ-c8n"; */
+"L6P-UJ-c8n.text" = "second tab";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "OpS-Pt-8xT"; */
+"OpS-Pt-8xT.title" = "Item";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "e9I-1C-sKr"; */
+"e9I-1C-sKr.text" = "Name";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "gLh-W8-F4C"; */
+"gLh-W8-F4C.text" = "Title";
+
+/* Class = "UIBarButtonItem"; title = "返回"; ObjectID = "pZG-tu-mxi"; */
+"pZG-tu-mxi.title" = "返回";
+
+/* Class = "UINavigationItem"; title = "player"; ObjectID = "w6v-nw-e2C"; */
+"w6v-nw-e2C.title" = "player";

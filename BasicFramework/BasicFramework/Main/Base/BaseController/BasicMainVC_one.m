@@ -12,6 +12,7 @@
 #import "HHLabel.h"
 @interface BasicMainVC_one ()
 @property (nonatomic,retain) HHLabel * label;
+
 @end
 
 @implementation BasicMainVC_one
@@ -24,8 +25,27 @@
     NSLog(@"获取当前最顶层的ViewController%@",[self topViewController]);
     [self addLabel1];
     [self addLabel2];
-    
     [self aboutEvent:self.view];
+    
+    UIPanGestureRecognizer * pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(pan:)];
+    [self.view addGestureRecognizer:pan];
+   
+    
+    
+    /*
+    CATransition *myTransition=[CATransition animation];//创建CATransition
+    myTransition.duration=0.3;//持续时长0.3秒
+    myTransition.timingFunction=UIViewAnimationCurveEaseInOut;//计时函数，从头到尾的流畅度
+    myTransition.type=kCATransitionPush;//动画类型
+    myTransition.subtype=kCATransitionFromLeft;//子类型
+    //要令一个转场生效，组要将动画添加到将要变为动画视图所附着的图层。例如在两个视图控制器之间进行转场，那就将动画添加到窗口的图层中：
+    [[self.view.superview layer]addAnimation:myTransition forKey:nil ];
+    //如果是将控制器内的子视图转场到另一个子视图，就将动画加入到视图控制器的图层。还有一种选择，用视图控制器内部的视图作为替代，将你的子视图作为主视图的子图层：
+    [ self.view.layer addAnimation:myTransition forKey:nil ];
+//    [ self.view addSubview:newView ];
+//    [oldView removeFromSuperview];
+    //如果你使用的是导航控制器，可以将动画加到导航控制器的视图图层中。
+//    [ navigationController.view.layer addAnimation:myTransition forKey:nil  ];*/
     
 }
 
@@ -145,7 +165,25 @@
     
     NSLog(@"%@", self.nextResponder);//包含view controller 的view属性的封装视图。
     NSLog(@"%@", self.nextResponder.nextResponder);
+    
+     for (UITouch *touch in touches) {
+          NSLog(@" - %f",touch.timestamp);
+          NSLog(@" - %ld",touch.phase);
+          NSLog(@" - %ld",touch.tapCount);
+          NSLog(@" - %ld",touch.type);
+          CGPoint touchPoint = [touch locationInView:self.view];//获取到的是手指点击屏幕实时的坐标点；
+          NSLog(@"%@",NSStringFromCGPoint(touchPoint));
+     }
 
+}
+-(void)pan:(UIPanGestureRecognizer *)pan{
+     CGPoint transPoint = [pan translationInView:self.view];//获取到的是手指移动后，在相对坐标中的偏移量
+     NSLog(@"%@",NSStringFromCGPoint(transPoint));
+}
+#pragma mark - 返回输入键盘
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
 -(void)v2{
@@ -168,7 +206,6 @@
     _label.font = [UIFont systemFontOfSize:16];
     _label.text = @"Slide";
     _label.animated = YES;
-    
     [self.view addSubview:_label];
 }
 
@@ -209,8 +246,39 @@
 }
 -(void)pop{
     
-    HPopView * hp = [[HPopView alloc]initWithFrame:CGRectMake(10, 20, 30, 40)];
+    HPopView * hp = [[HPopView alloc]initWithFrame:CGRectMake(10, 20, 300, 40)];
+
+//    HPopView * hp = [[HPopView alloc]init];
     [hp show];
+    
+    hp.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    NSLayoutConstraint *logoViewtopConstraint   = [NSLayoutConstraint constraintWithItem:hp attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTopMargin multiplier:1.0f constant:280];
+    
+    NSLayoutConstraint *logoViewcenterConstaint = [NSLayoutConstraint constraintWithItem:hp attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeftMargin multiplier:1.0f constant:0];
+    
+    NSLayoutConstraint *logoViewwidthConstaint  = [NSLayoutConstraint constraintWithItem:hp attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:0.5f constant:300];
+    
+    NSLayoutConstraint *logoViewhightConstaint  = [NSLayoutConstraint constraintWithItem:hp attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:kNilOptions multiplier:1.0f constant:40];
+    
+    // 第三步：添加约束
+    
+    logoViewtopConstraint.active   = YES;
+    
+    logoViewcenterConstaint.active = YES;
+    
+    logoViewwidthConstaint.active  = YES;
+    
+    logoViewhightConstaint.active  = YES;
+    
+    [hp addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(changeBounds:)]];
+    
+}
+-(void)changeBounds:(UITapGestureRecognizer *)tap{
+    
+
+    [NSLayoutConstraint constraintWithItem:tap.view attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeWidth multiplier:1 constant:100].active = YES;
+
     
 }
 -(void)setView{

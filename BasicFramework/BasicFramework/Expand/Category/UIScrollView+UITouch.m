@@ -9,7 +9,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     [[self nextResponder] touchesBegan:touches withEvent:event];//父控件,也就是其SuperView或是UIViewConterller
-    [super touchesBegan:touches withEvent:event];//父类 -> 默认做法让父控件操作
+//    [super touchesBegan:touches withEvent:event];//父类 -> 默认做法让父控件操作
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
